@@ -99,8 +99,15 @@ Kết quả thực tế: xem [reports/benchmark_report.md](../reports/benchmark_
 2. **Tavily đôi khi trả snippet rỗng** — researcher prompt vẫn dùng index `[n]` nên
    không crash, nhưng research_notes có thể nói "insufficient evidence". *Fix*: tăng
    `max_sources` hoặc đổi `search_depth="advanced"`.
-3. **Citation drift** — writer thỉnh thoảng bỏ sót 1 nguồn (q1 còn 80%). *Fix khả thi*:
-   thêm CriticAgent ép writer cite đủ, hoặc post-process kiểm tra rồi loop về writer.
+3. **Citation drift** — ở benchmark đầu (chưa có critic) writer bỏ sót 1 nguồn,
+   q1 chỉ đạt 80% coverage. *Fix đã apply*: bonus CriticAgent compute coverage trên
+   `final_answer`, nếu < 100% thì clear answer + gửi feedback liệt kê index thiếu để
+   writer rewrite; bounded `max_retries=1` để không vô hạn. Sau khi enable, cả 3 query
+   đạt 100% coverage (xem benchmark mới nhất).
+4. **LangSmith 401 Unauthorized** — sai/expired API key làm trace không lên server
+   nhưng không crash run (LangSmith client log warning rồi swallow). *Fix*: refresh
+   key ở https://smith.langchain.com/settings; verify bằng `LANGSMITH_TRACING=true`
+   + chạy 1 query, nếu không thấy warning trong stderr là OK.
 
 ## Exit ticket
 
