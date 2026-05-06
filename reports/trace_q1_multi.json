@@ -1,0 +1,215 @@
+{
+  "request": {
+    "query": "Research GraphRAG state-of-the-art and write a 500-word summary",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 5,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer",
+    "critic",
+    "done"
+  ],
+  "sources": [
+    {
+      "title": "Welcome - GraphRAG",
+      "url": "https://microsoft.github.io/graphrag/",
+      "snippet": "👉 [Microsoft Research Blog Post](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/). GraphRAG is a structured, hierarchical approach to Retrieval Augmented Generation (RAG), as opposed to naive semantic-search. The GraphRAG process involves extracting a knowledge graph out of raw text, building a community hierarchy, generating summaries for these communities, and then leveraging these structures when perform RAG-based tasks. To learn more about GraphRAG and how it can be used to enhance your language model's ability to reason about your private data, please visit the [Microsoft Research Blog Post](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/). ## GraphRAG vs Baseline RAG 🔍. GraphRAG uses knowledge graphs to provide substantial improvements in question-and-answer performance when reasoning about complex information. Microsoft Research’s new approach, GraphRAG, creates a knowledge graph based on an input corpus. This graph, along with community summaries and graph machine learning outputs, are used to augment prompts at query time. GraphRAG builds upon our prior [research](https://www.microsoft.com/en-us/worklab/patterns-hidden-inside-the-org-chart) and [tooling](https://github.com/graspologic-org/graspologic) using graph machine learning. Please see the [breaking changes](https://github.com/microsoft/graphrag/blob/main/breaking-changes.md) document for notes on our approach to versioning the project.",
+      "metadata": {
+        "score": 0.370522
+      }
+    },
+    {
+      "title": "Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv",
+      "url": "https://arxiv.org/html/2501.00309v2",
+      "snippet": "# Retrieval-Augmented Generation with Graphs (GraphRAG). Retrieval-augmented generation (RAG) is a powerful technique that enhances downstream task execution by retrieving additional information, such as knowledge, skills, and tools from external sources. Graph, by its intrinsic \"nodes connected by edges\" nature, encodes massive heterogeneous and relational information, making it a golden resource for RAG in tremendous real-world applications. As a result, we have recently witnessed increasing attention on equipping RAG with Graph, i.e., GraphRAG. However, unlike conventional RAG, where the retriever, generator, and external data sources can be uniformly designed in the neural-embedding space, the uniqueness of graph-structured data, such as diverse-formatted and domain-specific relational knowledge, poses unique and significant challenges when designing GraphRAG for different domains. Our survey first proposes a holistic GraphRAG framework by defining its key components, including query processor, retriever, organizer, generator, and data source. The retrieved content is then refined by an organizer and seamlessly integrated with the original query or instruction, which is further fed into the generator to produce the final answer.",
+      "metadata": {
+        "score": 0.3534064
+      }
+    },
+    {
+      "title": "GraphRAG Explained: Enhancing RAG with Knowledge Graphs",
+      "url": "https://medium.com/@zilliz_learn/graphrag-explained-enhancing-rag-with-knowledge-graphs-3312065f99e1",
+      "snippet": "# GraphRAG Explained: Enhancing RAG with Knowledge Graphs | by Zilliz | Medium. # GraphRAG Explained: Enhancing RAG with Knowledge Graphs. Retrieval Augmented Generation (RAG) is a technique that connects external data sources to enhance the output of large language models) (LLMs). A baseline RAG usually integrates a vector database and an LLM, where the vector database stores and retrieves contextual information for user queries, and the LLM generates answers based on the retrieved context. For example, consider this question: “_What name was given to the son of the man who defeated the usurper Allectus?”_. To address such challenges, Microsoft Research introduced GraphRAG, a brand-new method that augments RAG retrieval and generation with knowledge graphs. In the following sections, we’ll explain how GraphRAG works under the hood and how to run it with the Milvusvector database. Unlike a baseline RAG that uses a vector database to retrieve semantically similar text, GraphRAG enhances RAG by incorporating knowledge graphs (KGs).",
+      "metadata": {
+        "score": 0.3280454
+      }
+    },
+    {
+      "title": "Project GraphRAG - Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/project/graphrag/",
+      "snippet": "# Project GraphRAG. * ### GraphRAG: New tool for complex data discovery now on GitHub. July 2, 2024 | Darren Edge, Ha Trinh, Steven Truitt, Jonathan Larson. * ### GraphRAG: Unlocking LLM discovery on narrative private data. * ### GraphRAG auto-tuning provides rapid adaptation to new domains. November 15, 2024 | Bryan Li, Ha Trinh, Darren Edge, Jonathan Larson. November 25, 2024 | Darren Edge, Ha Trinh, Jonathan Larson. March 19, 2025 | Dasha Metropolitansky. June 5, 2025 | Darren Edge, Ha Trinh, Andres Morales Esquivel, Jonathan Larson. August 5, 2025 | Dasha Metropolitansky. GraphRAG and LazyGraphRAG technology is now available through Microsoft Discovery (opens in new tab), an agentic platform for scientific research built in Azure. BenchmarkQED, a set of tools for evaluating RAG based systems, is also available on GitHub (opens in new tab). GraphRAG Library (opens in new tab). BenchmarkQED (opens in new tab). Archived: GraphRAG Solution Accelerator (opens in new tab). Opens in a new tab. ## GraphRAG.",
+      "metadata": {
+        "score": 0.31504065
+      }
+    },
+    {
+      "title": "A GraphRAG Approach to Query-Focused Summarization (Microsoft",
+      "url": "https://www.facebook.com/groups/470156308080157/posts/1202086618220452/",
+      "snippet": "Our approach uses an LLM to build a graph index in two stages: first, to derive an entity knowledge graph from the source documents, then to pre",
+      "metadata": {
+        "score": 0.29205537
+      }
+    }
+  ],
+  "research_notes": "- GraphRAG is a structured, hierarchical approach to Retrieval Augmented Generation (RAG) that utilizes knowledge graphs to enhance the reasoning capabilities of language models when dealing with complex information [1].\n- The GraphRAG process involves extracting a knowledge graph from raw text, constructing a community hierarchy, generating summaries for these communities, and using these structures during RAG tasks [1].\n- Unlike conventional RAG systems that rely on vector databases, GraphRAG integrates knowledge graphs, which encode heterogeneous and relational information, providing a richer context for generating responses [2][3].\n- The framework of GraphRAG includes key components such as a query processor, retriever, organizer, generator, and data source, which work together to refine and integrate retrieved content with the original query [2].\n- GraphRAG has shown substantial improvements in question-and-answer performance compared to baseline RAG systems, particularly in reasoning about complex queries [1].\n- The technology behind GraphRAG allows for rapid adaptation to new domains, making it versatile for various applications in scientific research and data discovery [4].\n- GraphRAG is available through Microsoft Discovery, an agentic platform built on Azure, and includes tools like BenchmarkQED for evaluating RAG-based systems [4].\n- The integration of knowledge graphs in GraphRAG addresses unique challenges posed by graph-structured data, such as diverse formats and domain-specific relational knowledge [2].\n- GraphRAG's approach to query-focused summarization involves building a graph index using an LLM to derive an entity knowledge graph from source documents [5].\n- There is a gap in detailed comparative performance metrics between GraphRAG and other RAG systems, which could provide insights into its effectiveness across different tasks and domains.",
+  "analysis_notes": "### 1) Key Claims\n- GraphRAG is a novel hierarchical approach to Retrieval Augmented Generation (RAG) that enhances language models' reasoning capabilities through the use of knowledge graphs [1].\n- The process involves extracting knowledge graphs from raw text, creating community hierarchies, and generating summaries for these communities, which are utilized in RAG tasks [1].\n- Unlike traditional RAG systems that depend on vector databases, GraphRAG leverages knowledge graphs to provide a richer context for response generation [2][3].\n- The framework consists of several components: a query processor, retriever, organizer, generator, and data source, which collaboratively refine and integrate content with the original query [2].\n- GraphRAG demonstrates significant improvements in question-and-answer performance, especially for complex queries, compared to baseline RAG systems [1].\n- The technology is adaptable to new domains, making it suitable for various applications in scientific research and data discovery [4].\n- GraphRAG is accessible via Microsoft Discovery, which includes tools for evaluating RAG systems [4].\n- The integration of knowledge graphs addresses challenges related to graph-structured data, such as diverse formats and domain-specific knowledge [2].\n- The approach to query-focused summarization involves constructing a graph index using a language model to derive an entity knowledge graph from source documents [5].\n\n### 2) Agreements\n- There is consensus on the effectiveness of knowledge graphs in enhancing the reasoning capabilities of language models, as highlighted by multiple sources [1][2][3].\n- The structured framework of GraphRAG, which includes various components working in unison, is recognized as a significant advancement over traditional RAG systems [2].\n- The adaptability of GraphRAG to new domains is acknowledged, indicating its potential for broad applications in scientific and data-driven fields [4].\n\n### 3) Disagreements / Open Questions\n- While GraphRAG shows improvements in performance, there is a lack of detailed comparative metrics against other RAG systems, raising questions about its relative effectiveness across different tasks and domains.\n- The specific mechanisms by which GraphRAG enhances reasoning capabilities compared to traditional methods remain underexplored, warranting further investigation.\n\n### 4) Weak Evidence or Gaps\n- The research notes indicate a gap in comprehensive performance metrics that compare GraphRAG with other RAG systems, which is crucial for understanding its advantages and limitations [4].\n- There is limited information on the scalability of GraphRAG in real-world applications, particularly in handling large datasets or diverse knowledge domains.\n- The notes do not provide insights into potential limitations or challenges faced during the implementation of GraphRAG, which could inform users about practical considerations.",
+  "final_answer": "### GraphRAG: A State-of-the-Art Approach to Retrieval Augmented Generation\n\nGraphRAG is an innovative framework designed to enhance the capabilities of language models in Retrieval Augmented Generation (RAG) tasks through the integration of knowledge graphs. This structured and hierarchical approach addresses the complexities of information retrieval and reasoning, providing a more effective means of generating responses to complex queries compared to traditional RAG systems.\n\n#### Key Components and Process\n\nThe GraphRAG process begins with the extraction of a knowledge graph from raw text. This graph represents relational and heterogeneous information, which is crucial for understanding the context of the data. Following this, a community hierarchy is constructed, allowing for the organization of information into manageable segments. Summaries are then generated for these communities, which play a pivotal role during RAG tasks by providing focused insights [1].\n\nGraphRAG's architecture includes several essential components: a query processor, retriever, organizer, generator, and data source. These elements work in concert to refine and integrate the retrieved content with the original query, ensuring that the responses generated are not only relevant but also contextually rich [2]. This contrasts sharply with conventional RAG systems that often rely on vector databases, which can limit the depth of understanding and reasoning capabilities.\n\n#### Performance and Adaptability\n\nOne of the standout features of GraphRAG is its demonstrated improvement in question-and-answer performance, particularly for complex queries. Studies have shown that it outperforms baseline RAG systems, making it a valuable tool for applications requiring advanced reasoning [1]. Moreover, the technology is designed for rapid adaptation to new domains, which enhances its versatility in various fields, including scientific research and data discovery [4].\n\nGraphRAG is accessible through Microsoft Discovery, a platform built on Azure that provides users with tools for evaluating RAG-based systems, such as BenchmarkQED. This accessibility allows researchers and developers to leverage the capabilities of GraphRAG without extensive setup or infrastructure [4].\n\n#### Addressing Challenges with Knowledge Graphs\n\nThe integration of knowledge graphs in GraphRAG effectively addresses several unique challenges posed by graph-structured data. These include dealing with diverse formats and domain-specific relational knowledge, which are often obstacles in traditional data retrieval systems [2]. The approach to query-focused summarization, which involves constructing a graph index using a language model to derive an entity knowledge graph from source documents, further enhances the system's ability to generate precise and relevant responses [5].\n\n#### Areas for Further Exploration\n\nDespite its advantages, there are still open questions regarding GraphRAG's comparative performance metrics against other RAG systems. A detailed analysis of its effectiveness across various tasks and domains is necessary to fully understand its strengths and limitations. Additionally, while GraphRAG shows promise, insights into its scalability in real-world applications, especially when handling large datasets or diverse knowledge domains, remain limited. Understanding potential implementation challenges is also crucial for users considering adopting this technology.\n\nIn conclusion, GraphRAG represents a significant advancement in the field of Retrieval Augmented Generation by leveraging knowledge graphs to enhance language model reasoning capabilities. Its structured approach, improved performance, and adaptability make it a compelling choice for complex information retrieval tasks.\n\n### Sources\n[1] Welcome - GraphRAG - https://microsoft.github.io/graphrag/  \n[2] Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv - https://arxiv.org/html/2501.00309v2  \n[3] GraphRAG Explained: Enhancing RAG with Knowledge Graphs - https://medium.com/@zilliz_learn/graphrag-explained-enhancing-rag-with-knowledge-graphs-3312065f99e1  \n[4] Project GraphRAG - Microsoft Research - https://www.microsoft.com/en-us/research/project/graphrag/  \n[5] A GraphRAG Approach to Query-Focused Summarization (Microsoft) - https://www.facebook.com/groups/470156308080157/posts/1202086618220452/",
+  "critic_feedback": "Approved at coverage 100%.",
+  "critic_attempts": 1,
+  "agent_results": [
+    {
+      "agent": "supervisor",
+      "content": "researcher",
+      "metadata": {
+        "iteration": 1
+      }
+    },
+    {
+      "agent": "researcher",
+      "content": "- GraphRAG is a structured, hierarchical approach to Retrieval Augmented Generation (RAG) that utilizes knowledge graphs to enhance the reasoning capabilities of language models when dealing with complex information [1].\n- The GraphRAG process involves extracting a knowledge graph from raw text, constructing a community hierarchy, generating summaries for these communities, and using these structures during RAG tasks [1].\n- Unlike conventional RAG systems that rely on vector databases, GraphRAG integrates knowledge graphs, which encode heterogeneous and relational information, providing a richer context for generating responses [2][3].\n- The framework of GraphRAG includes key components such as a query processor, retriever, organizer, generator, and data source, which work together to refine and integrate retrieved content with the original query [2].\n- GraphRAG has shown substantial improvements in question-and-answer performance compared to baseline RAG systems, particularly in reasoning about complex queries [1].\n- The technology behind GraphRAG allows for rapid adaptation to new domains, making it versatile for various applications in scientific research and data discovery [4].\n- GraphRAG is available through Microsoft Discovery, an agentic platform built on Azure, and includes tools like BenchmarkQED for evaluating RAG-based systems [4].\n- The integration of knowledge graphs in GraphRAG addresses unique challenges posed by graph-structured data, such as diverse formats and domain-specific relational knowledge [2].\n- GraphRAG's approach to query-focused summarization involves building a graph index using an LLM to derive an entity knowledge graph from source documents [5].\n- There is a gap in detailed comparative performance metrics between GraphRAG and other RAG systems, which could provide insights into its effectiveness across different tasks and domains.",
+      "metadata": {
+        "input_tokens": 1365,
+        "output_tokens": 347,
+        "cost_usd": 0.00041294999999999993,
+        "model": "gpt-4o-mini",
+        "sources": 5
+      }
+    },
+    {
+      "agent": "supervisor",
+      "content": "analyst",
+      "metadata": {
+        "iteration": 2
+      }
+    },
+    {
+      "agent": "analyst",
+      "content": "### 1) Key Claims\n- GraphRAG is a novel hierarchical approach to Retrieval Augmented Generation (RAG) that enhances language models' reasoning capabilities through the use of knowledge graphs [1].\n- The process involves extracting knowledge graphs from raw text, creating community hierarchies, and generating summaries for these communities, which are utilized in RAG tasks [1].\n- Unlike traditional RAG systems that depend on vector databases, GraphRAG leverages knowledge graphs to provide a richer context for response generation [2][3].\n- The framework consists of several components: a query processor, retriever, organizer, generator, and data source, which collaboratively refine and integrate content with the original query [2].\n- GraphRAG demonstrates significant improvements in question-and-answer performance, especially for complex queries, compared to baseline RAG systems [1].\n- The technology is adaptable to new domains, making it suitable for various applications in scientific research and data discovery [4].\n- GraphRAG is accessible via Microsoft Discovery, which includes tools for evaluating RAG systems [4].\n- The integration of knowledge graphs addresses challenges related to graph-structured data, such as diverse formats and domain-specific knowledge [2].\n- The approach to query-focused summarization involves constructing a graph index using a language model to derive an entity knowledge graph from source documents [5].\n\n### 2) Agreements\n- There is consensus on the effectiveness of knowledge graphs in enhancing the reasoning capabilities of language models, as highlighted by multiple sources [1][2][3].\n- The structured framework of GraphRAG, which includes various components working in unison, is recognized as a significant advancement over traditional RAG systems [2].\n- The adaptability of GraphRAG to new domains is acknowledged, indicating its potential for broad applications in scientific and data-driven fields [4].\n\n### 3) Disagreements / Open Questions\n- While GraphRAG shows improvements in performance, there is a lack of detailed comparative metrics against other RAG systems, raising questions about its relative effectiveness across different tasks and domains.\n- The specific mechanisms by which GraphRAG enhances reasoning capabilities compared to traditional methods remain underexplored, warranting further investigation.\n\n### 4) Weak Evidence or Gaps\n- The research notes indicate a gap in comprehensive performance metrics that compare GraphRAG with other RAG systems, which is crucial for understanding its advantages and limitations [4].\n- There is limited information on the scalability of GraphRAG in real-world applications, particularly in handling large datasets or diverse knowledge domains.\n- The notes do not provide insights into potential limitations or challenges faced during the implementation of GraphRAG, which could inform users about practical considerations.",
+      "metadata": {
+        "input_tokens": 452,
+        "output_tokens": 540,
+        "cost_usd": 0.0003918,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "agent": "supervisor",
+      "content": "writer",
+      "metadata": {
+        "iteration": 3
+      }
+    },
+    {
+      "agent": "writer",
+      "content": "### GraphRAG: A State-of-the-Art Approach to Retrieval Augmented Generation\n\nGraphRAG is an innovative framework designed to enhance the capabilities of language models in Retrieval Augmented Generation (RAG) tasks through the integration of knowledge graphs. This structured and hierarchical approach addresses the complexities of information retrieval and reasoning, providing a more effective means of generating responses to complex queries compared to traditional RAG systems.\n\n#### Key Components and Process\n\nThe GraphRAG process begins with the extraction of a knowledge graph from raw text. This graph represents relational and heterogeneous information, which is crucial for understanding the context of the data. Following this, a community hierarchy is constructed, allowing for the organization of information into manageable segments. Summaries are then generated for these communities, which play a pivotal role during RAG tasks by providing focused insights [1].\n\nGraphRAG's architecture includes several essential components: a query processor, retriever, organizer, generator, and data source. These elements work in concert to refine and integrate the retrieved content with the original query, ensuring that the responses generated are not only relevant but also contextually rich [2]. This contrasts sharply with conventional RAG systems that often rely on vector databases, which can limit the depth of understanding and reasoning capabilities.\n\n#### Performance and Adaptability\n\nOne of the standout features of GraphRAG is its demonstrated improvement in question-and-answer performance, particularly for complex queries. Studies have shown that it outperforms baseline RAG systems, making it a valuable tool for applications requiring advanced reasoning [1]. Moreover, the technology is designed for rapid adaptation to new domains, which enhances its versatility in various fields, including scientific research and data discovery [4].\n\nGraphRAG is accessible through Microsoft Discovery, a platform built on Azure that provides users with tools for evaluating RAG-based systems, such as BenchmarkQED. This accessibility allows researchers and developers to leverage the capabilities of GraphRAG without extensive setup or infrastructure [4].\n\n#### Addressing Challenges with Knowledge Graphs\n\nThe integration of knowledge graphs in GraphRAG effectively addresses several unique challenges posed by graph-structured data. These include dealing with diverse formats and domain-specific relational knowledge, which are often obstacles in traditional data retrieval systems [2]. The approach to query-focused summarization, which involves constructing a graph index using a language model to derive an entity knowledge graph from source documents, further enhances the system's ability to generate precise and relevant responses [5].\n\n#### Areas for Further Exploration\n\nDespite its advantages, there are still open questions regarding GraphRAG's comparative performance metrics against other RAG systems. A detailed analysis of its effectiveness across various tasks and domains is necessary to fully understand its strengths and limitations. Additionally, while GraphRAG shows promise, insights into its scalability in real-world applications, especially when handling large datasets or diverse knowledge domains, remain limited. Understanding potential implementation challenges is also crucial for users considering adopting this technology.\n\nIn conclusion, GraphRAG represents a significant advancement in the field of Retrieval Augmented Generation by leveraging knowledge graphs to enhance language model reasoning capabilities. Its structured approach, improved performance, and adaptability make it a compelling choice for complex information retrieval tasks.\n\n### Sources\n[1] Welcome - GraphRAG - https://microsoft.github.io/graphrag/  \n[2] Retrieval-Augmented Generation with Graphs (GraphRAG) - arXiv - https://arxiv.org/html/2501.00309v2  \n[3] GraphRAG Explained: Enhancing RAG with Knowledge Graphs - https://medium.com/@zilliz_learn/graphrag-explained-enhancing-rag-with-knowledge-graphs-3312065f99e1  \n[4] Project GraphRAG - Microsoft Research - https://www.microsoft.com/en-us/research/project/graphrag/  \n[5] A GraphRAG Approach to Query-Focused Summarization (Microsoft) - https://www.facebook.com/groups/470156308080157/posts/1202086618220452/",
+      "metadata": {
+        "input_tokens": 1189,
+        "output_tokens": 812,
+        "cost_usd": 0.00066555,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "agent": "supervisor",
+      "content": "critic",
+      "metadata": {
+        "iteration": 4
+      }
+    },
+    {
+      "agent": "critic",
+      "content": "Approved at coverage 100%.",
+      "metadata": {
+        "coverage": 1.0,
+        "missing": [],
+        "attempts": 1,
+        "outcome": "approved"
+      }
+    },
+    {
+      "agent": "supervisor",
+      "content": "done",
+      "metadata": {
+        "iteration": 5
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "supervisor",
+      "payload": {
+        "route": "researcher",
+        "iteration": 1
+      }
+    },
+    {
+      "name": "researcher",
+      "payload": {
+        "input_tokens": 1365,
+        "output_tokens": 347,
+        "cost_usd": 0.00041294999999999993,
+        "model": "gpt-4o-mini",
+        "sources": 5
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "route": "analyst",
+        "iteration": 2
+      }
+    },
+    {
+      "name": "analyst",
+      "payload": {
+        "input_tokens": 452,
+        "output_tokens": 540,
+        "cost_usd": 0.0003918,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "route": "writer",
+        "iteration": 3
+      }
+    },
+    {
+      "name": "writer",
+      "payload": {
+        "input_tokens": 1189,
+        "output_tokens": 812,
+        "cost_usd": 0.00066555,
+        "model": "gpt-4o-mini"
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "route": "critic",
+        "iteration": 4
+      }
+    },
+    {
+      "name": "critic",
+      "payload": {
+        "coverage": 1.0,
+        "missing": [],
+        "attempts": 1,
+        "outcome": "approved"
+      }
+    },
+    {
+      "name": "supervisor",
+      "payload": {
+        "route": "done",
+        "iteration": 5
+      }
+    }
+  ],
+  "errors": []
+}
